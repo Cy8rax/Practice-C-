@@ -22,6 +22,13 @@
 
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
-double a = num1/num2;
-
+int a = num1 % num2;
+if(a == 0)
+{
+    Console.WriteLine("the number is Кратно ))");
+}
+else
+{
+    Console.WriteLine("The remainder" + a);
+}
 Console.WriteLine(a);
