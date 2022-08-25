@@ -34,13 +34,14 @@
 // Console.WriteLine(a);
 
 //Write prog that accept 2 numbers and determines that its кратно и 7 и 23:
-int a = Convert.ToInt32(Console.ReadLine());
+// int a = Convert.ToInt32(Console.ReadLine());
 
-if (a % 7 == 0 && a % 23 == 0)
-{
-    Console.WriteLine("Это число кратно 7 & 23" + a);
-}
-else
-{
-    Console.WriteLine("Не кратно");
-}
+// if (a % 7 == 0 && a % 23 == 0)
+// {
+//     Console.WriteLine("Это число кратно 7 & 23 = " + a);
+// }
+// else
+// {
+//     Console.WriteLine("Не кратно");
+// }
+
