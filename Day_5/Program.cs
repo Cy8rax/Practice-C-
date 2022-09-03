@@ -36,15 +36,8 @@ Console.WriteLine("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 int[] array =new int[size];
-if(size/2 % 2!=0)
-{
-    int end = size/2+1;
-}
-else
-{
-    int end = size/2;
-}
-int[] array_B=new int[end];
+
+int[] temp=new int[size/2+size%2];
 
 void Gener(int[] arr)
 {
@@ -52,9 +45,14 @@ void Gener(int[] arr)
     arr[i]=new Random().Next(0,10);
 }
 
-void logics(int[] arr1, int[] arr2)
+Gener(array);
+Console.WriteLine(String.Join("; ", array));
+for(int j=0;j<(size/2+size%2);j++)
 {
-    for(int j=0;j<end;j++)
-    size=size-1
-    array_B[j]=array[j]+array[j+size-1]
+    temp[j]=array[j]*array[size-1-j];
+    if(j==size-1-j)
+    {
+        temp[j]=array[j];
+    }
 }
+Console.WriteLine(String.Join("; ", temp));
