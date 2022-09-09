@@ -24,20 +24,43 @@
 // Console.WriteLine("[{0}]",String.Join(",",temp));
 
 //Альтернативный способ:
-int[] GetArray(int size, int minValue,int maxValue)
-{
-    int[] res = new int[size];
-    for(int i=0;i<size;i++)
-    {
-        res[i]= new Random().Next(minValue,maxValue+1);
-    }
-    return res;
-}
+// int[] Array=GetArray(10,0,10);
+// Console.WriteLine(String.Join(",",Array));
 
-void ReversArray(int[] inArray)
+// ReversArray(Array);
+// Console.WriteLine(String.Join(",",Array));
+
+// int[] GetArray(int size, int minValue,int maxValue)
+// {
+//     int[] res = new int[size];
+//     for(int i=0;i<size;i++)
+//     {
+//         res[i]= new Random().Next(minValue,maxValue+1);
+//     }
+//     return res;
+// }
+
+// void ReversArray(int[] inArray)
+// {
+//     for(int i=0;i<inArray.Length/2;i++)
+//     {
+//         int k=inArray[i];
+//         inArray[i]=inArray[inArray.Length-1-i];
+//         inArray[inArray.Length-1-i]=k; 
+//     }
+// }
+
+//Перевод числа в двичную систему
+
+Console.WriteLine("Введите число для перевода в десятеричную: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int b=0;
+int a2=0;
+while(a>1)
 {
-    for(int i=0;i<inArray.Length/2;i++)
-    int k=inArray[i];
-    inArray[i]=inArray[inArray.Length-1-i];
-    inArray[inArray.Length-1-i]=k; 
+    {
+        Console.Write(b);
+        a2=a/2;
+        b=a-a2;
+    }
 }
