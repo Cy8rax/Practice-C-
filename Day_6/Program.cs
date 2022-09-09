@@ -52,15 +52,60 @@
 
 //Перевод числа в двичную систему
 
-Console.WriteLine("Введите число для перевода в десятеричную: ");
-int a = Convert.ToInt32(Console.ReadLine());
-int b=0;
-int a2=0;
-while(a>1)
+// Console.WriteLine("Введите число для перевода в десятеричную: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// void convert(int number)
+// {
+//     string result="";
+//     while(number>0)
+//     {
+//     result=number%2+result;
+//     number/=2;
+//     }
+//     Console.WriteLine(result);
+// }
+
+// convert(number);
+
+//Выведите первые числа фибоначчи:
+//----пример с лекции----
+// int fibonacci(int n)
+// {
+//     if(n == 1 || n == 2) return 1;
+//     else return fibonacci(n-1)+fibonacci(n-2);
+// }
+
+// for(int i=1;i<10;i++)
+// {
+//     Console.WriteLine(fibonacci(i));
+// }
+
+//---решение---
+// Console.Write("Введите число n: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int[] array = new int[number];
+// Console.WriteLine(String.Join(",",array));
+// array[0] = 1;
+// array[1] = 1;
+// for(int i=2; i<number-1;i++)
+// {
+//     array[i+1]=array[i]+array[i-1];
+//     Console.Write(array[i+1]+" ");
+// }
+
+//---OR----//
+
+int num=Convert.ToInt32(Console.ReadLine());
+
+int firstN = 0;
+int secondN = 1;
+
+for(int i=3;i<=num;i++)
 {
-    {
-        Console.Write(b);
-        a2=a/2;
-        b=a-a2;
-    }
+    int newN=firstN+secondN;
+    Console.Write(newN+", ");
+    firstN=secondN;
+    secondN=newN;
 }
